@@ -2,7 +2,6 @@
 
 . "$(dirname "$0")/_/husky.sh"
 
-echo "the pre-commit hook ran 🚀"
 echo "prettify running on staged files 🚀"
 npx lint-staged # ✅ replace the dummy "echo" command
 echo "the pre-commit hook ran 🚀" 

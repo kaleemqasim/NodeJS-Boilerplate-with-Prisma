@@ -1,7 +1,7 @@
 const UserService = require("@services/userService.js");
 const securePassword = require("@utils/securePassword");
 const i18n = require("i18n");
-const { responseWithData, responseWithoutData } = require("../utils/response");
+const { responseWithData, responseWithoutData } = require("@utils/response");
 
 // TODO, for return messages, use i18 multiple languages json files.
 // TODO, make common object for return object (success, failure), with option parameter of message, currently its repeating
