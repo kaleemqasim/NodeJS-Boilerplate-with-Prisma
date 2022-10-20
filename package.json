@@ -40,7 +40,8 @@
     "@services": "src/services",
     "@locales": "src/locales",
     "@prisma_root": "src/prisma",
-    "@routes": "src/routes"
+    "@routes": "src/routes",
+    "@validators": "src/validators"
   },
   "lint-staged": {
     "*.{js,jsx}": [
