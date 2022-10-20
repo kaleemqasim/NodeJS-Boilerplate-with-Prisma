@@ -1,5 +1,5 @@
 module.exports = {
-    getTime() {
-        return (new Date().toLocaleTimeString());
-    }
-}
+  getTime() {
+    return new Date().toLocaleTimeString();
+  },
+};

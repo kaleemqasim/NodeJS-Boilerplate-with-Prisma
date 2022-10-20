@@ -1,26 +1,27 @@
-require('module-alias/register')
+require("module-alias/register");
 
-const express = require('express');
-const morgan = require('morgan');
-const helmet = require('helmet');
-const bodyParser = require('body-parser');
-const routes = require('@routes/index.js');
-const setLocale = require('@middlewares/setLocale');
+const express = require("express");
+const morgan = require("morgan");
+const helmet = require("helmet");
+const bodyParser = require("body-parser");
+const routes = require("@routes/index.js");
+const setLocale = require("@middlewares/setLocale");
 
+global.prisma = require("@prisma_root/index.js");
 
-global.prisma = require('@prisma_root/index.js')
-
-require('dotenv').config();
+require("dotenv").config();
 
 const app = express();
-const monk = require('monk');
+const monk = require("monk");
 app.use(helmet());
-app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-app.use(setLocale)
-app.use(express.static('public'));
+app.use(morgan("dev"));
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
+app.use(setLocale);
+app.use(express.static("public"));
 // app.use(function( req, res, next ) {
 //   // grab reference of render
 //   var _render = res.render;
@@ -34,9 +35,7 @@ app.use(express.static('public'));
 //   }
 //   next();
 // } );
-app.use('/', routes);
-
-
+app.use("/", routes);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
