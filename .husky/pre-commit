@@ -4,5 +4,5 @@
 
 echo "the pre-commit hook ran 🚀"
 echo "prettify running on staged files 🚀"
-npx pretty-quick --staged # ✅ replace the dummy "echo" command
+npx lint-staged # ✅ replace the dummy "echo" command
 echo "the pre-commit hook ran 🚀" 
