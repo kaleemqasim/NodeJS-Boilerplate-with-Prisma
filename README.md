@@ -1,5 +1,5 @@
 # NodeJS-Boilerplate-with-Prisma
-This boilerplate is a good to go start for any kind of project. Its follows all standard practices, secure and it is very much scalable for any kind of project.
+This boilerplate is a good to go start for any kind of project. Its follows all standard practices, secure and it is very much scalable.
 
 ## Features
 - **Database:** any database is configurable with Prisma/ORM
@@ -44,16 +44,16 @@ Linting:
 
 ```bash
 # run ESLint
-yarn lint
+npm lint
 
 # fix ESLint errors
-yarn lint:fix
+npm lint:fix
 
 # run prettier
-yarn prettier
+npm prettier
 
 # fix prettier errors
-yarn prettier:fix
+npm prettier:fix
 ```
 
 ## Contributing
