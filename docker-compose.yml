@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    entrypoint:
+      - /bin/sh
+      - docker/entrypoint.sh  
+    depends_on: 
+      - mysql_server
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    environment:
+      - DATABASE_URL=$DATABASE_URL
+    stdin_open: true
+    tty: true
+  mysql_server:
+    image: mysql:8.0
+    environment: 
+      - MYSQL_DATABASE=mern
+      - MYSQL_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+
+volumes: 
+  db:
