@@ -13,7 +13,7 @@ exports.createUser = async (userData) => {
     if (e instanceof PrismaClientKnownRequestError) {
       if (e.code === "P2002") {
         console.log(
-          "There is a unique constraint violation, a new user cannot be created with this email"
+          "There is a unique constraint violation, a new user cannot be created with this email."
         );
       }
     }
