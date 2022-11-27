@@ -6,7 +6,6 @@ const i18n = require("i18n");
 exports.index = async function (req, res) {
   try {
     var users = await UserService.getUsers();
-    console.log(users)
     return responseWithData(200, i18n.__("request_success"), users, res);
   } catch (e) {
     return responseWithoutData(400, i18n.__("request_failed"), res);
